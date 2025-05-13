@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trova il tuo seggio elettorale CNSU</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #0d6efd;
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .footer {
+            background-color: #212529;
+            color: #f8f9fa;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+        }
+        .card {
+            margin-bottom: 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+        }
+        .seggio-info {
+            display: none;
+        }
+        .seggio-info.show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        #searchInput {
+            border-radius: 10px;
+            padding: 0.75rem 1.25rem;
+            border: 1px solid #ced4da;
+            box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+        }
+        .btn-search {
+            border-radius: 10px;
+            padding: 0.75rem 1.5rem;
+        }
+        .highlight {
+            background-color: rgba(255, 255, 0, 0.5);
+            padding: 0.1rem 0.2rem;
+            border-radius: 3px;
+        }
+        #noResults {
+            display: none;
+            padding: 2rem;
+            text-align: center;
+            background-color: #f8d7da;
+            color: #721c24;
+            border-radius: 10px;
+            margin-top: 2rem;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+        }
+        .search-container {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .card-header {
+            border-top-left-radius: 0.5rem !important;
+            border-top-right-radius: 0.5rem !important;
+            font-weight: 600;
+        }
+        .dates-box {
+            background-color: rgba(255,255,255,0.2);
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+        .card-footer {
+            background-color: #f8f9fa;
+            border-bottom-left-radius: 0.5rem !important;
+            border-bottom-right-radius: 0.5rem !important;
+        }
+        .badge-seggio {
+            font-size: 1rem;
+            margin-right: 0.5rem;
+        }
+        .ubicazione address {
+            margin-bottom: 0;
+            padding-left: 1rem;
+            border-left: 3px solid #0d6efd;
+        }
+        .btn-outline-primary {
+            border-radius: 50px;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold"><i class="bi bi-bank me-2"></i>Trova il tuo seggio elettorale al Politecnico di Milano</h1>
+                    <p class="lead fs-4 mt-3">Votazioni per l'elezione dei componenti del Consiglio Nazionale degli Studenti Universitari</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="dates-box text-center">
+                        <h5 class="mb-3"><i class="bi bi-calendar-event me-2"></i>Date di votazione:</h5>
+                        <p class="mb-2"><span class="badge bg-light text-dark">Mercoledì 14 maggio 2025</span> <span class="badge bg-white text-primary">9:00-19:00</span></p>
+                        <p class="mb-0"><span class="badge bg-light text-dark">Giovedì 15 maggio 2025</span> <span class="badge bg-white text-primary">9:00-14:00</span></p>
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <a href="https://www.polimi.it/fileadmin/user_upload/Il-Politecnico/governance/organi-di-ateneo/rappresentanti-studenti/votazioni-CNSU/allegati_new/MANIFESTO_CNSU_2025.pdf" 
+                           class="btn btn-light btn-lg shadow-sm" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="bi bi-file-earmark-text me-2"></i><strong>Consulta il manifesto delle liste</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Search Bar -->
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="search-container">
+                    <h4 class="mb-4 text-center"><i class="bi bi-search me-2"></i>Trova il tuo seggio</h4>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text bg-white"><i class="bi bi-mortarboard"></i></span>
+                        <input type="text" id="searchInput" class="form-control form-control-lg" placeholder="Inserisci il nome del tuo corso...">
+                        <button class="btn btn-primary btn-search" type="button" id="searchButton">
+                            <i class="bi bi-search me-2"></i>Cerca
+                        </button>
+                    </div>
+                    <div class="form-text text-center">Inserisci il nome (anche parziale) del tuo corso di studi per trovare il seggio corrispondente</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div id="noResults" class="alert alert-warning">
+            <i class="bi bi-exclamation-triangle me-2"></i>Nessun corso trovato. Prova con un altro termine di ricerca.
+        </div>
+
+        <div id="resultsContainer" class="row">
+            <!-- Results will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+        <div class="container">
+            <div class="row align-items-center">
+                
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0"><i class="bi bi-buildings me-2"></i>© 2025 - Algorithm-net.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap and custom scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let seggiData = null;
+            
+            // Fetch the JSON data
+            fetch('seggi.json')
+                .then(response => response.json())
+                .then(data => {
+                    seggiData = data;
+                    console.log('Data loaded:', seggiData);
+                })
+                .catch(error => {
+                    console.error('Error loading data:', error);
+                    // Show error message to user
+                    const resultsContainer = document.getElementById('resultsContainer');
+                    resultsContainer.innerHTML = `
+                        <div class="col-12">
+                            <div class="alert alert-danger">
+                                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                                Errore nel caricamento dei dati. Ricarica la pagina o contatta l'amministratore.
+                            </div>
+                        </div>
+                    `;
+                });
+
+            // Search functionality
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+            const resultsContainer = document.getElementById('resultsContainer');
+            const noResults = document.getElementById('noResults');
+
+            // Function to perform search
+            function performSearch() {
+                if (!seggiData) {
+                    console.error('Data not loaded yet');
+                    return;
+                }
+
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                resultsContainer.innerHTML = '';
+                
+                // If search term is empty, don't show anything
+                if (searchTerm === '') {
+                    noResults.style.display = 'none';
+                    return;
+                }
+
+                let foundResults = false;
+                
+                // Create a map to track which seggi have been displayed
+                const displayedSeggi = new Set();
+                
+                // Track which courses match the search term
+                const matchingCourses = [];
+                
+                // Find all matching courses first
+                seggiData.seggi.forEach(seggio => {
+                    seggio.corsi.forEach(corso => {
+                        if (corso.toLowerCase().includes(searchTerm)) {
+                            matchingCourses.push({
+                                corso: corso,
+                                seggio: seggio
+                            });
+                        }
+                    });
+                });
+                
+                // Show no results message if needed
+                if (matchingCourses.length === 0) {
+                    noResults.style.display = 'block';
+                    return;
+                } else {
+                    noResults.style.display = 'none';
+                    foundResults = true;
+                }
+                
+                // Display matching courses grouped by seggio
+                matchingCourses.forEach(match => {
+                    const seggio = match.seggio;
+                    const corso = match.corso;
+                    
+                    // If we've already displayed this seggio, skip
+                    if (displayedSeggi.has(seggio.numero)) {
+                        return;
+                    }
+                    
+                    // Mark this seggio as displayed
+                    displayedSeggi.add(seggio.numero);
+                    
+                    // Create matching courses list for this seggio
+                    let matchingCorsiHtml = '';
+                    seggio.corsi.forEach(c => {
+                        if (c.toLowerCase().includes(searchTerm)) {
+                            // Highlight the matching part
+                            const highlightedText = c.replace(
+                                new RegExp(`(${searchTerm})`, 'gi'), 
+                                '<span class="highlight">$1</span>'
+                            );
+                            matchingCorsiHtml += `<li class="list-group-item border-0 bg-light">${highlightedText}</li>`;
+                        }
+                    });
+                    
+                    // Create card for this seggio
+                    const seggioHtml = `
+                        <div class="col-lg-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-primary text-white py-3">
+                                    <h5 class="mb-0">
+                                        <span class="badge bg-white text-primary badge-seggio">${seggio.numero}</span>
+                                        ${seggio.nome}
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="bi bi-building me-2 text-primary fs-4"></i>
+                                        <h6 class="mb-0">Scuola: ${seggio.scuola}</h6>
+                                    </div>
+                                    <div class="ubicazione mb-4">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-geo-alt me-2 text-primary fs-4"></i>
+                                            <strong>Ubicazione:</strong>
+                                        </div>
+                                        <address>
+                                            <i class="bi bi-door-open me-2"></i>${seggio.ubicazione.aula}, ${seggio.ubicazione.edificio}<br>
+                                            <i class="bi bi-signpost me-2"></i>${seggio.ubicazione.indirizzo || ''}<br>
+                                            <i class="bi bi-buildings me-2"></i>${seggio.ubicazione.città}
+                                        </address>
+                                    </div>
+                                    <div class="text-center mb-3">
+                                        <button class="btn btn-outline-primary btn-sm show-courses" 
+                                                data-bs-toggle="collapse" 
+                                                data-bs-target="#corsi-${seggio.numero}">
+                                            <i class="bi bi-list-ul me-2"></i>Mostra corsi corrispondenti
+                                        </button>
+                                    </div>
+                                    <div class="collapse" id="corsi-${seggio.numero}">
+                                        <div class="card card-body bg-light border-0">
+                                            <h6 class="mb-3"><i class="bi bi-mortarboard me-2"></i>Corsi corrispondenti alla ricerca:</h6>
+                                            <ul class="list-group list-group-flush">
+                                                ${matchingCorsiHtml}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center py-3">
+                                    <i class="bi bi-info-circle me-2"></i>
+                                    <small class="text-muted">Ricorda di portare un documento d'identità valido</small>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    resultsContainer.innerHTML += seggioHtml;
+                });
+            }
+            
+            // Add event listeners
+            searchButton.addEventListener('click', performSearch);
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+            
+            // Real-time search as user types (optional, with small delay)
+            let typingTimer;
+            searchInput.addEventListener('input', function() {
+                clearTimeout(typingTimer);
+                typingTimer = setTimeout(performSearch, 300); // 300ms delay
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+{
+  "informazioni_generali": {
+    "evento": "Votazioni per la elezione dei componenti del Consiglio Nazionale degli Studenti Universitari (C.N.S.U.)",
+    "date": [
+      {
+        "giorno": "mercoledì 14 maggio 2025",
+        "orario": "dalle ore 09.00 alle ore 19.00"
+      },
+      {
+        "giorno": "giovedì 15 maggio 2025",
+        "orario": "dalle ore 09.00 alle ore 14.00"
+      }
+    ],
+    "responsabile_procedimento": "dr.ssa Michela Brioschi"
+  },
+  "seggi": [
+    {
+      "numero": 1,
+      "nome": "SEDE BONARDI",
+      "scuola": "Scuola di Architettura Urbanistica, Ingegneria delle Costruzioni",
+      "componenti": ["Studenti"],
+      "ubicazione": {
+        "aula": "Aula III.C",
+        "edificio": "Edificio 11",
+        "indirizzo": "Via Ampére, 2",
+        "città": "Milano"
+      },
+      "corsi": [
+        "Progettazione dell'Architettura (I Livello)",
+        "Scienze dell'Architettura (I Livello)",
+        "Architettura Ambientale (I Livello)"
+      ]
+    },
+    {
+      "numero": 2,
+      "nome": "SEDE BONARDI",
+      "scuola": "Scuola di Architettura Urbanistica Ingegneria delle Costruzioni",
+      "componenti": ["Studenti"],
+      "ubicazione": {
+        "aula": "Aula III.D",
+        "edificio": "Edificio 11",
+        "indirizzo": "Via Ampére, 2",
+        "città": "Milano"
+      },
+      "corsi": [
+        "Architettura - Architettura delle Costruzioni (LM)",
+        "Architettura - Progettazione Architettonica (LM)",
+        "Architettura e Disegno Urbano - Architecture and Urban Design (LM)",
+        "Building and Architectural Engineering (LM)",
+        "Ingegneria Edile (L)",
+        "Building Engineering for Sustainability (LM)",
+        "Landscape Architecture. Land Landscape Heritage (LM)",
+        "Ingegneria dei Sistemi Edilizi (LM)",
+        "Ingegneria dell'Edilizia (I Livello)",
+        "Ingegneria Edile e delle Costruzioni (I Livello)",
+        "Management of Built Environment - Gestione del Costruito (LM)",
+        "Pianificazione Territoriale Urbanistica e Ambientale (L)",
+        "Urban Planning and Policy Design - Pianificazione Urbana e Politiche Territoriali (LM)",
+        "Urbanistica (I Livello)",
+        "Urbanistica: Città Ambiente e Paesaggio (I Livello)",
+        "Architettura - Ambiente Costruito - Interni - Architecture - Built environment – Interiors (LM)",
+        "Architettura (L, LM e LS)"
+      ]
+    },
+    {
+      "numero": 3,
+      "nome": "SEDE LEONARDO",
+      "scuola": "Scuola di Ingegneria Civile Ambientale e Territoriale; Scuola di Ingegneria Industriale e dell'Informazione",
+      "componenti": ["Studenti"],
+      "ubicazione": {
+        "aula": "Aula 3.1.2",
+        "edificio": "Edificio 3",
+        "indirizzo": "P.zza Leonardo da Vinci, 32",
+        "città": "Milano"
+      },
+      "corsi": [
+        "Ingegneria Civile (L e I Livello)",
+        "Ingegneria Civile (Sezione Edile) (L)",
+        "Ingegneria Civile - Civil Engineering (LM)",
+        "Ingegneria Elettrica (L e I Livello)",
+        "Ingegneria Elettrotecnica (L)",
+        "Electrical Engineering – Ingegneria Elettrica (LM)",
+        "Ingegneria Elettronica (L e I Livello)",
+        "Electronics Engineering – Ingegneria Elettronica (LM)",
+        "Ingegneria per l'Ambiente e il Territorio (I Livello)",
+        "Ingegneria per l'Ambiente e il Territorio – Environmental and Land Planning Engineering (LM)",
+        "Geoinformatics Engineering - Ingegneria Geoinformatica (LM)"
+      ]
+    },
+    {
+      "numero": 4,
+      "nome": "SEDE LEONARDO",
+      "scuola": "Scuola di Ingegneria Industriale e dell'Informazione",
+      "componenti": ["Studenti"],
+      "ubicazione": {
+        "aula": "Aula 3.1.3",
+        "edificio": "Edificio 3",
+        "indirizzo": "P.zza Leonardo da Vinci, 32",
+        "città": "Milano"
+      },
+      "corsi": [
+        "Ingegneria dell'Automazione (I Livello e LM)",
+        "Automation and Control Engineering – Ingegneria dell'Automazione (LM)",
+        "Computer Science and Engineering – Ingegneria Informatica (LM)",
+        "High Performance Computing Engineering (LM)"
+      ]
+    },
+    {
+      "numero": 5,
+      "nome": "SEDE LEONARDO",
+      "scuola": "Scuola di Ingegneria Industriale e dell'Informazione",
+      "componenti": ["Studenti"],
+      "ubicazione": {
+        "aula": "Aula 3.1.4",
+        "edificio": "Edificio 3",
+        "indirizzo": "P.zza Leonardo da Vinci, 32",
+        "città": "Milano"
+      },
+      "corsi": [
+        "Food Engineering (LM)",
+        "Ingegneria delle Telecomunicazioni (L e LM)",
+        "Telecommunication Engineering – Ingegneria delle Telecomunicazioni (LM)",
+        "Ingegneria Informatica (L, I Livello e LS)"
+      ]
+    },
+    {
+      "numero": 6,
+      "nome": "SEDE LEONARDO",
+      "scuola": "Scuola di Ingegneria Industriale e dell'Informazione",
+      "componenti": ["Studenti"],
+      "ubicazione": {
+        "aula": "Aula 3.1.5",
+        "edificio": "Edificio 3",
+        "indirizzo": "Piazza Leonardo da Vinci, 32",
+        "città": "Milano"
+      },
+      "corsi": [
+        "Ingegneria Biomedica (L e I Livello)",
+        "Biomedical Engineering – Ingegneria Biomedica (LM)",
+        "Ingegneria dei Materiali e delle Nanotecnologie (I Livello)",
+        "Materials Engineering and Nanotechnolgy (LM)",
+        "Materials Engineering and Nanotechnology – Ingegneria dei Materiali e delle Nanotecnologie (LM)"
+      ]
+    },
+    {
+      "numero": 7,
+      "nome": "SEDE LEONARDO",
+      "scuola": "Scuola di Ingegneria Industriale e dell'Informazione",
+      "componenti": ["Studenti"],
+      "ubicazione": {
+        "aula": "Aula 3.1.6",
+        "edificio": "Edificio 3",
+        "indirizzo": "Piazza Leonardo da Vinci, 32",
+        "città": "Milano"
+      },
+      "corsi": [
+        "Ingegneria Chimica (L, I Livello e LM)",
+        "Chemical Engineering – Ingegneria Chimica (LM)",
+        "Industrial Safety and Risk Engineering (LM)",
+        "Ingegneria della Prevenzione e della Sicurezza nell'Industria di Processo (LM)",
+        "Ingegneria Fisica (I Livello e LM)",
+        "Engineering Physics – Ingegneria Fisica (LM)",
+        "Ingegneria Matematica (I Livello)",
+        "Mathematical Engineering – Ingegneria Matematica (LM)"
+      ]
+    },
+    {
+      "numero": 8,
+      "nome": "SEDE BOVISA/DURANDO",
+      "scuola": "Scuola di Design",
+      "componenti": ["Studenti"],
+      "ubicazione": {
+        "aula": "Aula B2 0.1",
+        "edificio": "Edificio B2",
+        "indirizzo": "Bovisa Via Durando, 10",
+        "città": "Milano"
+      },
+      "corsi": [
+        "Design & Engineering – Progetto e Ingegnerizzazione del Prodotto Industriale (LM)",
+        "Design del Prodotto per l'Innovazione (I Livello e LM)",
+        "Progetto e Ingegnerizzazione del Prodotto Industriale (Design & Engineering) (LS)",
+        "Design degli Interni (I Livello)",
+        "Interior and Spatial Design (LM)",
+        "Disegno Industriale (L e I Livello)",
+        "Design del Prodotto Industriale (I Livello)",
+        "Integrated Product Design (LM)",
+        "Design della Comunicazione (I Liv. e LM)",
+        "Design della Comunicazione (Communication Design) (LS)",
+        "Design della Moda (I Livello)",
+        "Design for the Fashion System – Design per il Sistema Moda (LM)",
+        "Digital and Interaction Design (LM)",
+        "Product Service System Design – Design per il Sistema Prodotto Servizio (LM)"
+      ]
+    },
+    {
+      "numero": 9,
+      "nome": "SEDE BOVISA/LA MASA",
+      "scuola": "Scuola di Ingegneria Industriale e dell'Informazione",
+      "componenti": ["Studenti"],
+      "ubicazione": {
+        "aula": "Aula L.02",
+        "edificio": "Edificio B12",
+        "indirizzo": "Bovisa Via La Masa, 34",
+        "città": "Milano"
+      },
+      "corsi": [
+        "Ingegneria Gestionale (L, I Livello e LS)",
+        "Management Engineering – Ingegneria Gestionale (LM)"
+      ]
+    },
+    {
+      "numero": 10,
+      "nome": "SEDE BOVISA/LA MASA",
+      "scuola": "Scuola di Ingegneria Industriale e dell'Informazione",
+      "componenti": ["Studenti"],
+      "ubicazione": {
+        "aula": "Aula L.03",
+        "edificio": "Edificio B12",
+        "indirizzo": "Bovisa Via La Masa, 34",
+        "città": "Milano"
+      },
+      "corsi": [
+        "Ingegneria Meccanica (L e I Livello)",
+        "Mechanical Engineering – Ingegneria Meccanica (LM)",
+        "Nuclear Engineering – Ingegneria Nucleare (LM)",
+        "Ingegneria Nucleare (LM)",
+        "Mobility Engineering (LM)"
+      ]
+    },
+    {
+      "numero": 11,
+      "nome": "SEDE BOVISA/LA MASA",
+      "scuola": "Scuola di Ingegneria Industriale e dell'Informazione",
+      "componenti": ["Studenti"],
+      "ubicazione": {
+        "aula": "Aula L.05",
+        "edificio": "Edificio B12",
+        "indirizzo": "Bovisa Via La Masa, 34",
+        "città": "Milano"
+      },
+      "corsi": [
+        "Ingegneria Aeronautica (L)",
+        "Ingegneria Aerospaziale (L e I Livello)",
+        "Aeronautical Engineering – Ingegneria Aeronautica (LM)",
+        "Space Engineering – Ingegneria Spaziale (LM)",
+        "Ingegneria Energetica (I Livello e LM)",
+        "Energy Engineering – Ingegneria Energetica (LM)"
+      ]
+    },
+    {
+      "numero": 12,
+      "nome": "SEDE CREMONA",
+      "scuola": "Scuola di Ingegneria Civile Ambientale e Territoriale; Scuola di Ingegneria Industriale e dell'Informazione",
+      "componenti": ["Studenti"],
+      "ubicazione": {
+        "aula": "Sala 020",
+        "edificio": "Edificio B – Primo piano",
+        "indirizzo": "Via Sesto, 39",
+        "città": "Cremona"
+      },
+      "corsi": [
+        "Agricultural Engineering (LM)",
+        "Ingegneria Gestionale (I Livello)",
+        "Ingegneria Informatica (I Livello)",
+        "Music and Acoustic Engineering (LM)"
+      ]
+    },
+    {
+      "numero": 13,
+      "nome": "SEDE LECCO",
+      "scuola": "Scuola di Architettura Urbanistica Ingegneria delle Costruzioni; Scuola di Ingegneria Civile Ambientale e Territoriale; Scuola di Ingegneria Industriale e dell'Informazione",
+      "componenti": ["Studenti"],
+      "ubicazione": {
+        "aula": "Sala Riunioni H 0.5",
+        "edificio": "Edificio 8",
+        "indirizzo": "",
+        "città": "Lecco"
+      },
+      "corsi": [
+        "Architectural Engineering (LM)",
+        "Building and Architectural Engineering (LM)",
+        "Interaction Design (I Livello)",
+        "Ingegneria Civile (L)",
+        "Ingegneria Civile e Ambientale (I Livello)",
+        "Ingegneria Civile per la Mitigazione del Rischio (I Livello)",
+        "Civil Engineering for Risk Mitigation (LM)",
+        "Ingegneria della Produzione Industriale (I Livello)",
+        "Ingegneria Edile – Architettura (L e LS)",
+        "Mechanical Engineering – Ingegneria Meccanica (LM)"
+      ]
+    },
+    {
+      "numero": 14,
+      "nome": "SEDE MANTOVA",
+      "scuola": "Scuola di Architettura Urbanistica Ingegneria delle Costruzioni",
+      "componenti": ["Studenti"],
+      "ubicazione": {
+        "aula": "Aula A.1.2",
+        "edificio": "",
+        "indirizzo": "P.zza d'Arco, 3",
+        "città": "Mantova"
+      },
+      "corsi": [
+        "Architectural Design and History – Progettazione Architettonica e Storia (LM)",
+        "Architettura (LS)",
+        "Progettazione dell'Architettura (I Livello)",
+        "Scienze dell'Architettura (I Livello)"
+      ]
+    },
+    {
+      "numero": 15,
+      "nome": "SEDE PIACENZA",
+      "scuola": "Scuola di Architettura Urbanistica Ingegneria delle Costruzioni; Scuola di Ingegneria Industriale e dell'Informazione",
+      "componenti": ["Studenti"],
+      "ubicazione": {
+        "aula": "Aula H – Primo piano",
+        "edificio": "",
+        "indirizzo": "Via Scalabrini, 76",
+        "città": "Piacenza"
+      },
+      "corsi": [
+        "Energy Engineering – Ingegneria Energetica (LM)",
+        "Ingegneria Meccanica (I Livello)",
+        "Mechanical Engineering – Ingegneria Meccanica (LM)",
+        "Architettura Ambientale (I Livello)",
+        "Progettazione dell'Architettura (I Livello)",
+        "Sustainable Architecture and Landscape Design – Architettura Sostenibile e Progetto del Paesaggio (LM)"
+      ]
+    }
+  ]
+}
